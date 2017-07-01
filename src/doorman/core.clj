@@ -23,6 +23,7 @@
 (defn- read-loop []
   (with-open [rdr (:reader *modem*)]
     (let [ls (line-seq rdr)]
+      (info "Doorman is ready")
       (loop [[line & r] ls]
         (case line
           "RING"
