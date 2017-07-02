@@ -3,4 +3,7 @@ Description=Door unlocks the front door
 
 [Service]
 Type=simple
-ExecStart=java -jar /usr/local/bin/doorman.jar /dev/ttyACM0
+ExecStart=/usr/bin/java -jar /usr/local/bin/doorman.jar /dev/ttyACM0
+
+[Install]
+WantedBy=multi-user.target
