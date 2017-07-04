@@ -39,5 +39,6 @@
 
 (defn -main [& args]
   (binding [*modem* (make-modem (first args))]
+    (at "ate0")
     (at "ats11=250")
     (read-loop)))
